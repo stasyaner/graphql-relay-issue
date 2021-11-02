@@ -1,6 +1,15 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { graphql } from "react-relay";
+
+const AppQuery = graphql`
+  query AppQuery {
+    viewer {
+      login
+    }
+  }
+`;
 
 function App() {
   return (
